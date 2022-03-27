@@ -1,0 +1,13 @@
+﻿@model TopMenuViewModel
+
+
+<nav id="top-menu">
+    <a href="mailto:@Model.MailTo" class="contact.email">@Model.MailTo</a>
+    <div class="social">
+        @foreach(var social in @Model.SocialMedia)
+        {
+           <a href="@social.Value">@social.Key</a>
+        }
+
+    </div>
+</nav>

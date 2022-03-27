@@ -1,0 +1,23 @@
+﻿@{
+    var dictionary = new Dictionary<string, string>();
+    dictionary.Add("facebook", "https://facebook.com");
+    dictionary.Add("twitter", "https://twitter.com");
+    dictionary.Add("youtube", "https://youtube.com");
+
+    var links = new List<AspLinkModel>
+    {
+    new AspLinkModel { DisplayName = "Home", ControllerName = "Home", ActionName ="Index"},
+    new AspLinkModel { DisplayName = "Services", ControllerName = "Services", ActionName ="Index"},
+    new AspLinkModel { DisplayName = "Contact", ControllerName = "Contact", ActionName ="Index"},
+    };
+
+    var branding = new BrandingViewModel { CompanyName = "Omnivus.", Slogan = "IT Service & Technology" };
+    var topMenu = new TopMenuViewModel { MailTo = "support@domain.com", SocialMedia = dictionary };
+    var mainMenu = new MainMenuViewModel { Links = links };
+}   
+
+<div class="header-grid">
+    <partial name="_LogotypePartial" model="@branding" />
+    <partial name="_TopMenuPartial" model="@topMenu" />
+    <partial name="_MainMenuPartial" model="@mainMenu" />
+</div>

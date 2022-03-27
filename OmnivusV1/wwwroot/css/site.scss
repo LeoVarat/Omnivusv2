@@ -1,0 +1,478 @@
+// Font scheme
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+// Font Family scheme
+$karla-font: 'Karla', sans-serif;
+$montserrat-font:'Montserrat', sans-serif;
+$roboto-font:'Roboto', sans-serif;
+
+// color scheme
+$main-color: #6C90B9;
+$main-turquoise-color: #69a1bb;
+$secondary-color: #a9c7ec;
+$secondary-bluegray-color: #a0b6d0;
+$dark-color: #002249;
+$light-color:#f5faff;
+$white-color: #ffffff;
+$blue-color: #006de8;
+$blue-dark-color: #0052af;
+$gray-color: #B7C3d6;
+$border-color: #99C2F6;
+$dark-bg-color: #00152E;
+
+
+body {
+    font-family: $karla-font;
+    color: $dark-color;
+}
+
+.bg-blue-gradient {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 5%, rgba(169,199,236,1) 95%);
+}
+
+#bg-about {
+    background-image: url('images/group 16.svg');
+    background-size: cover;
+    background-color: $light-color;
+}
+
+.bg-dark-blue {
+    background: $dark-bg-color;
+    color: $white-color;
+}
+
+.bg-light-blue {
+    background-color: $light-color;
+    color: $dark-color;
+}
+
+
+.container {
+    padding: 0;
+}
+
+a {
+    color: $main-color;
+    text-decoration: none;
+    &:hover {
+        color: $dark-color;
+    }
+}
+.btn {
+    border-radius: 0;
+    padding: 1rem 2.55rem;
+}
+.btn-main {
+    color: $white-color;
+    background-color: $blue-color;
+    border-color: $blue-color;
+
+    &:hover {
+        color: $white-color;
+        background-color: $blue-dark-color;
+    }
+}
+
+.btn-second {
+    color: $white-color;
+    background-color: $gray-color;
+    border-color: $gray-color;
+
+    &:hover {
+        color: $white-color;
+        background-color: $blue-dark-color;
+    }
+}
+
+#branding {
+    grid-area: branding;
+    background-color: $white-color;
+    text-align: center;
+    padding-top: 25px;
+    
+    h1 {
+        font-family: $montserrat-font;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    p {
+        font-family: $karla-font;
+        font-size: 14px;
+        color: $main-color;
+        line-height: 0.5;
+    }
+}
+
+
+#top-menu {
+    grid-area: topmenu;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $secondary-color;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    margin-left: 100px;
+
+    .social {
+        a {
+            margin-left: 1rem;
+        }
+    }
+}
+
+
+#main-menu {
+    grid-area: mainmenu;
+    padding-top: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    .menu-items {
+        margin-right: 2rem;
+        a {
+            margin-left: 4rem;
+        }
+    }
+}
+
+
+
+
+// Header
+.header-grid {
+    display: grid;
+    grid-template-columns: 274px auto;
+    grid-template-areas:
+    "branding topmenu"
+    "branding mainmenu";
+}
+
+// Home -  Showcase
+
+#showcase {
+    display: flex;
+
+    .column {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            p {
+                font-size: 24px;
+                color: $main-turquoise-color;
+            }
+
+            h1 {
+                font-size: 80px;
+                color: $dark-color;
+                font-family: $roboto-font;
+            }
+
+
+            .items {
+                display: flex;
+
+                .item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        margin-top: -1rem;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+
+        .showcase-img {
+            margin-right: -5rem;
+        }
+    }
+    
+}
+
+// Home -  About Us
+
+#about-us {
+    display: flex;
+
+
+
+    .column {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+
+        .about-title {
+            flex: 1;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding: -100px 0 0 0;
+        }
+        img {
+            margin: 30px;
+        }
+
+        h1 {
+            font-family: $roboto-font;
+            font-size: 60px;
+            font-weight: 400;
+            margin: 0 0 40px 0;
+        }
+
+        p {
+            font-family: $karla-font;
+            font-size: 16px;
+        }
+
+        .about-exp {
+            flex: 1;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            h2 {
+                font-family: $roboto-font;
+                font-size: 100px;
+                font-weight: 500;
+                color: $blue-color;
+                margin: 15px;
+            }
+
+            h3 {
+                font-family: $roboto-font;
+                font-size: 30px;
+                margin: 15px;
+            }
+
+            .about-img {
+                height: 887px;
+                
+            }
+        }
+    }
+}
+
+
+// Home - Intro
+
+#intro {
+    display: flex;
+
+    .column {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+
+        h4 {
+            color:$blue-color;
+            
+            img {
+                margin: 30px;
+            }
+        }
+
+        h1{
+            font-family: $roboto-font;
+            font-size: 60px;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: $main-turquoise-color;
+        }
+
+        p {
+            font-size: 16px;
+            color:$secondary-color;
+            padding: 10px 0;
+        }
+    }
+
+}
+
+// Home - Book a Meeting
+
+#book-a-meeting {
+    background-color: $dark-bg-color;
+    padding: 80px;
+    margin:90px;
+    color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1 {
+        font-size: 60px;
+        font-family: $roboto-font;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 20px;
+    }
+
+   input{
+       background-color: $dark-bg-color;
+       width: 420px;
+       height: 80px;
+       margin: 20px 0;
+
+    }
+
+    textarea {
+        background-color: $dark-bg-color;
+        height: 200px;
+        margin: 20px 0;
+    }
+
+
+
+}
+
+
+// Footer
+#footer {
+    display: flex;
+
+    .column {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+        
+        h1 {
+            font-family: $roboto-font;
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-family: $roboto-font;
+            font-size: 34px;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: $secondary-bluegray-color
+        }
+    }
+}
+
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $secondary-color;
+}
+
+
+
+// Services
+#page-title {
+    display: flex;
+    justify-content: center;
+
+    .content {
+        margin: 135px 0;
+        text-align: center;
+
+        h1 {
+            font-size: 80px;
+            color: $dark-color;
+            font-family: $roboto-font;
+            
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+            color: $main-turquoise-color;
+
+            a {
+                margin:0 1rem;
+            }
+        }
+    }
+}
+
+#services {
+    display: flex;
+    justify-content: center;
+    padding: 120px 15px;
+
+    .card {
+        padding: 15px;
+        border: none;
+    }
+}
+
+// Contact - Get in Touch
+
+#get-in-touch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px;
+    .column {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+
+        h4 {
+            color:$blue-color;
+            font-size: 16px;
+            
+            img {
+                margin: 30px;
+            }
+        }
+
+        h1 {
+            font-family: $roboto-font;
+            font-weight: 400;
+            font-size: 60px;
+            padding: 20px 0px;
+        }
+
+        .form-group {
+            padding: 10px 0;
+            input{
+                width: 570px;
+                height: 70px;
+                padding: 10px;
+            }
+
+
+            placeholder {
+                font-size: 16px;
+                color: $main-turquoise-color;
+                margin: 0 20px 0 0 ;
+            }
+        }
+
+        a {
+            margin:60px 0;
+        }
+
+    }
+}

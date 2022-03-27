@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1170" height="641" viewBox="0 0 1170 641">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#06f"/>
+      <stop offset="1" stop-color="#60abff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_17" data-name="Group 17" transform="translate(-375 -658)">
+    <g id="_6" data-name="6">
+      <rect id="bg" width="370" height="300" transform="translate(1175 999)" fill="#c1c1c1"/>
+      <rect id="bg-2" data-name="bg" width="370" height="70" transform="translate(1175 1229)" fill="#002249" opacity="0.702"/>
+      <text id="Game_Design" data-name="Game Design" transform="translate(1295 1270.5)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Game Design</tspan></text>
+      <rect id="bg-3" data-name="bg" width="70" height="70" transform="translate(1195 1209)" fill="#006de8"/>
+    </g>
+    <g id="_5" data-name="5">
+      <rect id="bg-4" data-name="bg" width="370" height="300" transform="translate(775 999)" fill="#c1c1c1"/>
+      <rect id="bg-5" data-name="bg" width="370" height="70" transform="translate(775 1229)" fill="#002249" opacity="0.702"/>
+      <text id="App_Development" data-name="App Development" transform="translate(895 1270.5)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">App Development</tspan></text>
+      <rect id="bg-6" data-name="bg" width="70" height="70" transform="translate(795 1209)" fill="#006de8"/>
+    </g>
+    <g id="_4" data-name="4">
+      <rect id="bg-7" data-name="bg" width="370" height="300" transform="translate(375 999)" fill="#c1c1c1"/>
+      <rect id="bg-8" data-name="bg" width="370" height="70" transform="translate(375 1229)" fill="#002249" opacity="0.702"/>
+      <text id="Web_Development" data-name="Web Development" transform="translate(495 1270.5)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Web Development</tspan></text>
+      <rect id="bg-9" data-name="bg" width="70" height="70" transform="translate(395 1209)" fill="#006de8"/>
+    </g>
+    <g id="_3" data-name="3">
+      <rect id="bg-10" data-name="bg" width="370" height="300" transform="translate(1175 658)" fill="#c1c1c1"/>
+      <rect id="bg-11" data-name="bg" width="370" height="70" transform="translate(1175 888)" fill="#002249" opacity="0.702"/>
+      <text id="Technology_Prof." data-name="Technology Prof." transform="translate(1295 929.5)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Technology Prof.</tspan></text>
+      <rect id="bg-12" data-name="bg" width="70" height="70" transform="translate(1195 868)" fill="#006de8"/>
+    </g>
+    <g id="_2" data-name="2">
+      <rect id="bg-13" data-name="bg" width="370" height="300" transform="translate(775 658)" fill="#c1c1c1"/>
+      <rect id="bg-14" data-name="bg" width="370" height="180" transform="translate(775 778)" opacity="0.902" fill="url(#linear-gradient)"/>
+      <text id="The_functional_goal_of_technical_content_is_to_help_people_use_a_product_successfully._The_business_goal_must_tie_the_content." data-name="The functional goal of technical content is to help people use a product successfully. The business goal must tie the content." transform="translate(815.26 853.534)" fill="#fff" font-size="14" font-family="SegoeUI, Segoe UI"><tspan x="0" y="15">The functional goal of technical content is to </tspan><tspan x="0" y="41">help people use a product successfully. The </tspan><tspan x="0" y="67">business goal must tie the content.</tspan></text>
+      <text id="IT_Consultancy" data-name="IT Consultancy" transform="translate(895 818.5)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">IT Consultancy</tspan></text>
+      <rect id="bg-15" data-name="bg" width="70" height="70" transform="translate(795 757)" fill="#006de8"/>
+    </g>
+    <g id="_1" data-name="1">
+      <rect id="bg-16" data-name="bg" width="370" height="300" transform="translate(375 658)" fill="#c1c1c1"/>
+      <rect id="bg-17" data-name="bg" width="370" height="70" transform="translate(375 888)" fill="#002249" opacity="0.702"/>
+      <text id="UI_UX_Design" data-name="UI/UX Design" transform="translate(495 929.5)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">UI/UX Design</tspan></text>
+      <rect id="bg-18" data-name="bg" width="70" height="70" transform="translate(395 868)" fill="#006de8"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+﻿@model SignInModel 
+
+@{
+    ViewData["Title"] = "Sign In";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container">
+        <div id="sign-in">
+                <div class="title mb-5">
+                    <h1>@ViewData["Title"]</h1>
+                    <p> ... just a few seconds away from being signed in! </p>
+                    <p> Don´t have an account yet? <a asp-action="SignUp"> Sign up here! </a> </p>
+                </div>
+                <div class="d-flex justify-content-center">
+                   <form asp-action="SignIn" asp-route-returnURL="@Model.ReturnUrl" class="col-8">
+                        <div class="mb-3">
+                            <input asp-for="Email" typeof="text" class="form-control" placeholder="Type in your email here" />
+                            <small><span asp-validation-for="Email" class="text-danger"></span></small>
+                        </div>
+                        <div class="mb-3">
+                            <input asp-for="Password" typeof="password" class="form-control" placeholder="Type in your super-safe-password here" />
+                            <small><span asp-validation-for="Password"  class="text-danger"></span></small>
+                        </div>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="mb-5">
+                            <button type="submit" class="btn btn-main">@ViewData["Title"]</button>
+                         </div>
+                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
