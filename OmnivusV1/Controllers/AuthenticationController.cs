@@ -10,11 +10,13 @@ namespace OmnivusV1.Controllers
 
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AuthenticationController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AuthenticationController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
         #region SignUp
@@ -38,6 +40,11 @@ namespace OmnivusV1.Controllers
         {
             if (ModelState.IsValid)
             {
+                var roleName = "User";
+
+                if (!_userManager.Users.Any())
+                    roleName = "Admin";
+
                 var user = new AppUser()
                 {
                     UserName = model.Email,
@@ -50,8 +57,10 @@ namespace OmnivusV1.Controllers
                 };
 
                 var result = await _userManager.CreateAsync(user, model.Password);
+                
                 if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, roleName);
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
                     if (model.ReturnUrl == null || model.ReturnUrl == "/")
@@ -72,10 +81,6 @@ namespace OmnivusV1.Controllers
 
 
         #endregion
-
-
-
-
 
         #region Sign in
         public IActionResult SignIn(string returnUrl = null)
@@ -119,11 +124,13 @@ namespace OmnivusV1.Controllers
 
         #endregion
 
-
         #region Sign out
-        public IActionResult SignOut()
+        public async Task<IActionResult> SignOut()
         {
-            return View();
+            if (_signInManager.IsSignedIn(User))
+                await _signInManager.SignOutAsync();
+
+            return RedirectToAction("Index", "Home");
         }
 
 
