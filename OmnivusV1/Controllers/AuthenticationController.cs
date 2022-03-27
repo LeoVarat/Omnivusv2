@@ -40,6 +40,15 @@ namespace OmnivusV1.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                if(!_roleManager.Roles.Any())
+                {
+                    await _roleManager.CreateAsync(new IdentityRole("admin"));
+                    await _roleManager.CreateAsync(new IdentityRole("user"));
+                }
+
+
+
                 var roleName = "User";
 
                 if (!_userManager.Users.Any())
